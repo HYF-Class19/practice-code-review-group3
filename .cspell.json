@@ -1,6 +1,8 @@
 {
   "language": "en",
-  "words": [],
+  "words": [
+    "subarrays"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "package.json",
