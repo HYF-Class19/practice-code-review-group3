@@ -1,10 +1,10 @@
 /** .........
  * Converts a nested array into a single array with no nesting.
  *
- * It returns a new array and there are no side-effects
+ * It returns a new array and there are no side-effects.
  *
  * @param {Array} [array=[]] - The array to flatten.
- * @returns {Array} Returns the new flattened array.
+ * @returns {Array} [array=[]] - Returns the new flattened array.
  * @example
  *
  * deepFlat([1, [2, [3, [4]], 5]]);
@@ -17,5 +17,8 @@
  */
 
 export const deepFlat = (array) => {
+  if (!Array.isArray(array)) {
+    throw new TypeError();
+  }
   return array.flat(Infinity);
 };
