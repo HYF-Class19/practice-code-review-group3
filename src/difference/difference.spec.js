@@ -1,4 +1,4 @@
-const difference = require('./difference');
+import difference from './difference.js';
 
 /**
  * Creates an array of values that are in the first array, but not not in the second array.

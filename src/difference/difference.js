@@ -8,4 +8,4 @@ const difference = (arr1, arr2) => {
   return uniqueArr;
 };
 
-module.exports = difference;
+export default difference;
