@@ -30,4 +30,5 @@ const splitObject = (toSeparate) => {
   }));
   return newArr;
 };
-module.exports = splitObject;
+
+export default splitObject;
