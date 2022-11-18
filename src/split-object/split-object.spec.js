@@ -1,4 +1,4 @@
-import splitObject from './split-object';
+import {splitObject} from './split-object';
 
 describe('Splits an object into multiple objects with one key/value pair each', () => {
   describe('The object to split into key/value pairs.', () => {
