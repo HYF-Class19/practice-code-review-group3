@@ -1,35 +1,41 @@
-# Split Object
+# split-object
 
-Split an object into an array of objects. Each entry in the array will be one
-key/value pair from the object.
+## Strategy
+
+- I chose to used `.map` method because it be easily used to iterate over all
+  elements in an array,resulting in a new array
 
 ---
 
-Here's a starter docstring for your solutions. Feel free to rewrite it if that
-helps you understand:
+## Implementation
+
+-`.map` method allows us to loop through every element in the original array,
+perform an action and then generate a new Array based on our actions.
+
+-I could have used `forEach` how the this method doesn't return anything of an
+array but .map function will give us a new array built out of all the return
+values.
+
+## Use Cases
+
+.map((key) returns an iterator object that contains key/value pair for each
+element present in the Map object.
 
 ```js
-/**
- * Splits an object into multiple objects with one key/value pair each.
- * The new objects are returned in an array.
- *
- * This function has no side-effects, the argument object is not modified
- *
- * @param {Object} [toSeparate={}] - The object to split into key/value pairs.
- * @returns {Array} Returns a new array with one entry for each key/value pair.
- * @example
- *
- * splitObject({ a: 1, b: 2, c: 3 });
- * // -> [{ a: 1 }, { b: 2 }, { c: 3 }]
- *
- * @example
- *
- * splitObject({ name: 'robs', age: 25, tall: true, userName: 'sbor' });
- * // -> [{ name: 'robs }, { age: 25 }, { tall: true }, { userName: 'sbor' }]
- *
- * @example
- *
- * splitObject({});
- * // -> []
- */
+const splitObject = (toSeparate) => {
+  if (typeof toSeparate !== 'object') {
+    throw Error();
+  }
+  ``newArr`` is the new array that is returned after the function is applied.
+
+
+  const newArr = Object.keys(toSeparate).map((key) => ({
+    [key]: toSeparate[key],
+  }));
+  return newArr;
+};
 ```
+
+## Inspiration
+
+[This article from developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
