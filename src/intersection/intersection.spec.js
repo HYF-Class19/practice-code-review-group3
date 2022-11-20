@@ -1,4 +1,5 @@
 const intersection = require('./intersection.js');
+
 describe('Finds common values between 2 arrays', () => {
   it('inspects array and intersects with values', () => {
     const array = [1, 2, 3, 4, 5];
@@ -26,6 +27,7 @@ describe('Finds common values between 2 arrays', () => {
     expect(intersection(array, values)).toEqual(['']);
   });
 });
+
 describe('Finds errors when intersecting 2 arrays', () => {
   it('should return type error if one argument is not an array', () => {
     const array = 'home';
