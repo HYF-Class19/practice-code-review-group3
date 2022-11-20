@@ -1,4 +1,4 @@
-const intersection = require('./intersection.js');
+import { intersection } from './intersection.js';
 
 describe('Finds common values between 2 arrays', () => {
   it('inspects array and intersects with values', () => {

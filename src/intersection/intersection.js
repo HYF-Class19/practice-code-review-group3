@@ -20,7 +20,7 @@
  * // -> [2]
  */
 
-const intersection = (array = [], values = []) => {
+export const intersection = (array = [], values = []) => {
   if (!Array.isArray(array, values)) {
     throw new TypeError('it should be an array');
   }
@@ -28,5 +28,3 @@ const intersection = (array = [], values = []) => {
   newArray = [...new Set(newArray)];
   return newArray;
 };
-
-module.exports = intersection;
