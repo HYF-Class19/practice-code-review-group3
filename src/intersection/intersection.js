@@ -20,12 +20,12 @@
  */
 
 const intersection = (array = [], values = []) => {
-    if (!Array.isArray(array, values)) {
-        throw new TypeError('it should be an array');
-}
-    let newArray = array.filter((item) => values.includes(item));
-    newArray = [...new Set(newArray)];
-    return newArray;
+  if (!Array.isArray(array, values)) {
+    throw new TypeError('it should be an array');
+  }
+  let newArray = array.filter((item) => values.includes(item));
+  newArray = [...new Set(newArray)];
+  return newArray;
 };
 
 module.exports = intersection;
